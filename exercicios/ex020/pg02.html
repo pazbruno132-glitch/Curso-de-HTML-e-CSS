@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundo</title>
+    <style>
+        div.q1{
+            width: 500px;
+            height: 300px;
+            background-color: lightgray;
+            border: 2px solid black;
+        }
+
+        div#d1{
+            background-image: url('imagens/pattern001.png');
+        }
+
+        div#d2{
+            background-image: url('imagens/pattern002.png');
+            background-repeat: repeat-x;
+        }
+
+        div#d3{
+            background-image: url('imagens/pattern003.png');
+            background-repeat: repeat-y;
+        }
+
+        div#d4{
+            background-image: url('imagens/pattern004.png');
+            background-repeat: no-repeat;
+        }
+    </style>
+</head>
+<body>
+    <h1>Repetições em background-image</h1>
+
+    <h2>background-repeat: repeat;</h2>
+
+    <p>Repete a imagem tanto no sentido vertical, quanto horizontal (padrão).</p>
+
+    <div id="d1" class="q1">
+
+    </div>
+
+    <h2>background-repeat: repeat-x;</h2>
+
+    <p>Repete apenas no eixo horizontal.</p>
+
+    <div id="d2" class="q1">
+
+    </div>
+
+    <h2>background-repeat: repeat-y;</h2>
+
+    <p>Repete apenas no eixo vertical.</p>
+
+    <div id="d3" class="q1">
+
+    </div>
+
+    <h2>background-repeat: no-repeat;</h2>
+
+    <p>Não repete em nenhum eixo. A imagem só é carregada uma única vez.</p>
+
+    <div id="d4" class="q1">
+
+    </div>
+</body>
+</html>
