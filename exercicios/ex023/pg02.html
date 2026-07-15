@@ -7,20 +7,154 @@
 </head>
 <body>
     <h1>Teste</h1>
-    <form action="cadastro.php" method="post" autocomplete="on">
-        <p>
-            <label for="inome">Email:</label>
-            <input type="text" name="nome" id="inome" autocomplete="username">
-        </p>
-        <p>
-            <label for="isenha">Senha:</label>
-            <input type="password" name="senha" id="isenha" autocomplete="current-password">
-        </p>
-        <p>
-            <input type="submit" value="Enviar">
-            <input type="reset" value="Limpar">
+    <fieldset>
+        <legend>Dados Pessoais</legend>
+        <form action="cadastro.php" method="post" autocomplete="on">
+            <p>
+                <label for="inome">Usuário:</label>
+                <input type="text" name="nome" id="inome" autocomplete="name" maxlength="15" minlength="10" size="11" placeholder="Nome do Usuário" required>
+            </p>
+            <p>
+                <label for="isenha">Senha:</label>
+                <input type="password" name="senha" id="isenha" autocomplete="current-password" minlength="8" maxlength="12" required size="13" placeholder="Coloque sua Senha">
+            </p>
+            <p>
+                <input type="submit" value="Enviar">
+                <input type="reset" value="Limpar">
+            </p>
+            <p>
+                <label for="idata">Data:</label>
+                <input type="date" name="data" id="idata" required value="2020-07-13">
+            </p>
+            <p>
+                <label for="inum">Média</label>
+                <input type="number" name="num" id="inum" required placeholder="Sua Média" max="10" min="0" step="0.1" size="13">
+            </p>
+            <p>
+                <label for="iper">Periodo:</label>
+                <input type="month" name="per" id="iper" required>
+            </p>
+            <p>
+                <label for="itime">Horario:</label>
+                <input type="time" name="time" id="itime" required>
+            </p>
+            <p>
+                <label for="imail">Email:</label>
+                <input type="email" name="mail" id="imail" required autocomplete="email">
+            </p>
+            <p>
+                <label for="itel">Telefone:</label>
+                <input type="tel" name="tel" id="itel" required placeholder="(xx) xxxxx-xxxx" pattern="\(\d{2}\)\s\d{5}-\d{4}" autocomplete="tel">
+            </p>
+        </form>
+    </fieldset>
 
+    <fieldset>
+        <legend>Esportes Favoritos</legend>
+        <input type="checkbox" name="bas" id="ibas">
+        <label for="ibas">Basquete</label> <br>
+        
+        <input type="checkbox" name="fut" id="ifut" checked>
+        <label for="ifut">Futebol</label> <br>
+
+        <input type="checkbox" name="vol" id="ivol">
+        <label for="ivol">Volei</label> <br>
+    </fieldset>
+
+    <fieldset>
+        <legend>Sexo</legend>
+
+        <input type="radio" name="man" id="iman" checked>
+        <label for="iman">Masculino</label> <br>
+        
+        <input type="radio" name="man" id="imul">
+        <label for="imul">Feminino</label>
+    </fieldset>
+
+    <fieldset>
+        <legend>Mais Dados</legend>
+
+        <p>
+            <label for="icol">Escolha uma cor</label>
+            <input type="color" name="col" id="icol" value="white">
         </p>
+
+        <p>
+            <label for="ifile">Envie uma Foto</label>
+            <input type="file" name="file" id="ifile">
+        </p>
+
+        <p>
+            <label for="isatis">Satisfação com o nosso site</label>
+            <input type="range" name="satis" id="isatis" min="1" max="10" value="5" oninput="ival.innerHTML = Number(isatis.value)">
+            <output id="ival">5</output>
+        </p>
+
+        <p>
+            <label for="iest">Estados:</label>
+            <select name="est" id="iest">
+                <option value="escolha">--- ESCOLHA ---</option>
+                <optgroup label="Região Sudeste">
+                    <option value="RJ">Rio de Janeiro</option>
+                    <option value="SP">São Paulo</option>
+                    <option value="MG">Minas Gerais</option>
+                </optgroup>
+            </select>
+        </p>
+
+        <p>
+            <label for="iprof">Profissão:</label>
+            <input type="text" name="prof" id="iprof" list="listprof">
+            <datalist id="listprof">
+                <option>Professor</option>
+                <option>Policial</option>
+                <option>Bombeiro</option>
+            </datalist>
+        </p>
+
+        <p>
+            <label for="imen">Mensagem:</label> <br>
+            <textarea name="men" id="imen" rows="10" cols="20">
+    
+            </textarea>
+        </p>
+    </fieldset>
+
+    <form action="cadastro.php" method="post">
+        <fieldset>
+            <legend>JavaScript</legend>
+            <p>
+                <label for="inum1">Escolha um número</label>
+                <input type="number" name="num" id="inum" max="10" min="0" required oninput="isoma.innerHTML = Number(inum.value) + Number(inum2.value)">
+            </p>
+
+            <p>
+                <label for="inum2">Escolha outro número</label>
+                <input type="number" name="num" id="inum2" max="10" min="0" required oninput="isoma.innerHTML = Number(inum.value) + Number(inum2.value)">
+            </p>
+
+            <p>
+                <label for="isoma">Veja a Soma:</label>
+                <output name="soma" id="isoma">0</output>
+            </p>
+
+            <p>
+                <label for="iano">Em que ano você nasceu:</label>
+                <input type="number" name="ano" id="iano" max="2026" min="1900" oninput="calcIdade()">
+            </p>
+
+            <p>
+                <label for="iidade">Essa é sua idade:</label>
+                <output id="iidade">0</output>
+            </p>
+        </fieldset>
     </form>
+
+    <script>
+        function calcIdade() {
+            let atual = new Date().getFullYear() 
+            iidade.innerHTML = Number(atual) - Number(iano.value)
+        }
+    </script>
 </body>
 </html>
