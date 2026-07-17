@@ -1,0 +1,10 @@
+@charset "UTF-8";
+
+/*CSS para dispositivos em pé*/
+
+body{
+    background-image: url(../imagens/cev-portrait.jpg);
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: contain;
+}

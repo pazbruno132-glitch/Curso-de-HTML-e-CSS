@@ -1,0 +1,22 @@
+@charset "UTF-8";
+
+/*CSS para impressora*/
+
+body{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.2em;
+    line-height: 1.6em;
+}
+
+nav{
+    display: none;
+}
+
+p{
+    text-indent: 30px;
+    text-align: justify;
+}
+
+article{
+    width: 100%;
+}

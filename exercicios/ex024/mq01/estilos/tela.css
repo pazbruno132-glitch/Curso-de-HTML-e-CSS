@@ -1,0 +1,67 @@
+@charset "UTF-8";
+
+/*CSS para telas*/
+
+
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header{
+    background-color: darkgray;
+    color: white;
+    min-height: 150px;
+    text-align: center;
+}
+
+header > h1{
+    padding-top: 50px;
+    font-size: 3.0em;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.603);
+}
+
+nav{
+    background-color: lightgrey;
+    padding: 15px;
+}
+
+nav > a{
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    background-color: darkgray;
+    border-radius: 10px;
+}
+
+nav > a:hover{
+    text-decoration: underline;
+    background-color: rgba(128, 128, 128, 0.295);
+}
+
+main{
+    max-width: 600px;
+    min-width: 320px;
+    margin: auto;
+    background-color: lightgray;
+    margin-top: 10px;
+    padding: 15px;
+    text-align: justify;
+    border-radius: 20px;
+}
+
+main > article > h2{
+    color: white;
+    text-indent: 10px;
+    font-size: 2.2em;
+    text-decoration: underline;
+}
+
+main > article > p{
+    text-indent: 30px;
+    padding: 10px;
+}
