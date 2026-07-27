@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlexBox</title>
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+        }
+
+        body{
+            background-color: saddlebrown;
+        }
+
+        main{
+            display: flex;
+            background-color: darkgreen;
+            width: 100vw;
+            height: 100vh;
+            flex-flow: row nowrap;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        section{
+            background-color: darkblue;
+            padding: 20px;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <main id="container">
+        <section id="item">
+            <h1>Teste</h1>
+        </section>
+    </main>
+</body>
+</html>
